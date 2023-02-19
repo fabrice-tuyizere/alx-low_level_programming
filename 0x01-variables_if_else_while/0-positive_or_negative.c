@@ -4,7 +4,7 @@
 /* more headers goes there */
 /**
  * main- generate random number and states whether its negative or positive
- * return  ; arways return 0
+ * return  : always return 0
  */
 int main(void)
 {

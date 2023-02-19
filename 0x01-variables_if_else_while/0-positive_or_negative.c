@@ -3,8 +3,8 @@
 #include <time.h>
 /* more headers goes there */
 /**
- * main- generate random number and states whether its negative or positive
- * return  : always return 0
+ * main - generate random number and states whether its negative or positive
+ * Return: always return 0
  */
 int main(void)
 {

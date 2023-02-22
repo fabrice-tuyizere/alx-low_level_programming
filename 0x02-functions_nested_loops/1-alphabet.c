@@ -1,21 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - run the entire program
+ * print_alphabet - run the entire program
  * Return: always 0
  */
 void print_alphabet(void)
 {
 char i;
 
-for(i = 'a'; i <= 'z'; i++) 
-	putchar(i);
-	putchar('\n');
+for (i = 'a'; i <= 'z'; i++)
+{	
+	_putchar(i);
 }
-int main(void)
-{
-print_alphabet();
-	
-	return (0);
-
+_putchar('\n');
 }
-

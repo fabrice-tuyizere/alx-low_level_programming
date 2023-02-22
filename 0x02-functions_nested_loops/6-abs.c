@@ -1,18 +1,17 @@
 #include "main.h"
 /**
  * _abs - generate absolute value of number
+ * @n: parameter to be passed
  *
  * Return: return value
  */
 int _abs(int n)
 {
-int cal; 
 if (n <= 0)
 {
-	cal=-n;
-	return (cal);
+	return (-n);
 }
 else
-	return(n);
+	return (n);
 
 }

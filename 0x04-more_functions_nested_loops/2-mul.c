@@ -1,12 +1,13 @@
 #include "main.h"
+
 /**
- * mul - perform calculations
- * @a: 1st parameter
- * @b: second parameter
+ * mul - Perform calculations
+ * @a: The 1st parameter
+ * @b: Second parameter
  *
- * Return: return output
+ * Return: Return output
  */
 int mul(int a, int b)
 {
-	return(a*b);
+	return( a * b );
 }

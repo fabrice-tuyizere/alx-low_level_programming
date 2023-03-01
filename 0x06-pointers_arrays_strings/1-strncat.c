@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * *_strncat - function to return the concanated string
- *@dest: destination string
+ *@src: destination string
  *@n: parameter to termine the size of source
  * @dest: source string
+ * Return:return the utput string
  */
 char *_strncat(char *dest, char *src, int n)
 {

@@ -33,7 +33,11 @@ int main(int argc, char *argv[])
 	int num1, num2, num = 1;
 
 	if (argc != 3)
-		printf("Error");
+	{
+		printf("Error\n");
+		return (1);
+	}
+
 	else
 	{
 		num1 = myAtoi(argv[1]);

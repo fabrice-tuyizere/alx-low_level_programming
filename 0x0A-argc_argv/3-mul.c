@@ -30,17 +30,17 @@ int myAtoi(char *str)
 
 int main(int argc, char *argv[])
 {
-	int i = 1, num = 1;
+	int num1, num2, num = 1;
 
 	if (argc != 3)
 		printf("Error");
 	else
 	{
-	for ( ; i < argc; i++)
-	{
-		num = num * myAtoi(argv[i]);
-	}
-	printf("%d\n", num);
+		num1 = myAtoi(argv[1]);
+		num2 = myAtoi(argv[2]);
+		num = num1 * num2;
+		printf("%d", num);
+		printf("\n");
 	}
 	return (0);
 }

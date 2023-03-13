@@ -1,74 +1,34 @@
 #include <stdio.h>
-#include "main.h"
-/**
- * myAtoi - function definition
- * @str: parameter string
- * Return: always integer value;
- */
-
-int myAtoi(char *str)
-{
-	int res = 0;
-	int sign = 1;
-	int i = 0;
-	int flag = 0;
-
-	if (str[0] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	for (; str[i] != '\0'; ++i)
-	{
-		if (!(str[i] - '0' >= '0' && str[i] - '0' <= '9'))
-		{
-			flag = 1;
-			break;
-		}
-		res = res * 10 + str[i] - '0';
-	}
-	if (flag == 1)
-		return (0);
-	else
-		return (sign * res);
-}
+#include <stdlib.h>
 /**
  * main - entry of program
- * @argc: argument counter
- * @argv: argument vector
+ * @argc: argument count
+ * @argv: arguments vector
  * Return: always return 0;
  */
-
 int main(int argc, char *argv[])
 {
-	int result = 0;
-	int num, i, flag = 0;
+	int result = 0, i, num = 0, flag = 0;
 
-	if (argc == 0)
-		printf("%d", result);
+	if (argc == 1)
+		printf("%d\n", 0);
 	else
 	{
 	for (i = 1; i < argc; i++)
 	{
-		num = myAtoi(argv[i]);
+		num = atoi(argv[i]);
 		if (num == 0)
-		{
-		flag = 1;
-		break;
-		}
+			flag = 1;
 		else
-		{
 			result = result + num;
-		}
-		num = 0;
 	}
-	if (flag == 0)
-		printf("%d", result);
-	else
+	if (flag == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	else
+		printf("%d\n", result);
 	}
 	return (0);
 }

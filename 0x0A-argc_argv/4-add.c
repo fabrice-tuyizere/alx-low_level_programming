@@ -11,7 +11,10 @@ int main(int argc, char *argv[])
 	int result = 0, i, num = 0, flag = 0;
 
 	if (argc == 1)
-		printf("%d\n", 0);
+	{
+		printf("%d", 0);
+		printf("\n");
+	}
 	else
 	{
 	for (i = 1; i < argc; i++)
@@ -28,7 +31,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	else
-		printf("%d\n", result);
+	{
+		printf("%d", result);
+		printf("\n");
+	}
 	}
 	return (0);
 }

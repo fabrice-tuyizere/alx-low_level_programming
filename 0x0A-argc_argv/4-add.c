@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int result = 0, i, num = 0, flag = 0;
+	int result = 0, i, num = 0;
 
 	if (argc == 1)
 	{
@@ -21,20 +21,14 @@ int main(int argc, char *argv[])
 	{
 		num = atoi(argv[i]);
 		if (num == 0)
-			flag = 1;
+		{	printf("Error\n");
+			return (1);
+		}
 		else
 			result = result + num;
 	}
-	if (flag == 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
-	{
-		printf("%d", result);
+	printf("%d", result);
 		printf("\n");
-	}
 	}
 	return (0);
 }

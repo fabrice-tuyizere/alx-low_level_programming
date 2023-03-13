@@ -10,13 +10,6 @@ int main(int argc, char *argv[])
 {
 	int result = 0, i, num = 0;
 
-	if (argc == 1)
-	{
-		printf("%d", 0);
-		printf("\n");
-	}
-	else
-	{
 	for (i = 1; i < argc; i++)
 	{
 		num = atoi(argv[i]);
@@ -24,11 +17,9 @@ int main(int argc, char *argv[])
 		{	printf("Error\n");
 			return (1);
 		}
-		else
-			result = result + num;
+		result = result + num;
 	}
 	printf("%d", result);
 		printf("\n");
-	}
 	return (0);
 }

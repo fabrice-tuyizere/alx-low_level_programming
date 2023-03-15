@@ -12,12 +12,18 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int len;
 
+	if (s1 == NULL)
+		return (s2);
+	if(s2 == NULL)
+		return (s1);
 	for (; s2[i] != '\0'; i++)
 		le++;
 	for (i = 0; s1[i] != '\0'; i++)
 		count++;
 	len = le + count;
 	ptr = (char *)malloc(sizeof(char) * len);
+	if (ptr==NULL)
+		return (NULL);
 	for (i = 0; i < count; i++)
 		ptr[i] = s1[i];
 	for (j = 0; j < le; j++)

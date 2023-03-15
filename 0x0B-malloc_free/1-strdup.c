@@ -7,15 +7,17 @@
  */
 char *_strdup(char *str)
 {
-	int i, size = 1;
+	int i, size = 0, len =0;
 	char *ptr;
 
 	if (str == NULL)
 		return (NULL);
 	for ( ; str[size] != '\0'; size++)
-		;
-	ptr = (char *)malloc(size * sizeof(char));
-	for (i = 0; i < size; i++)
+		len++;
+	ptr = (char *)malloc((len + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
+	for (i = 0; i < len; i++)
 		ptr[i] = str[i];
 	return (ptr);
 	free(ptr);

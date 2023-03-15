@@ -13,16 +13,16 @@ char *str_concat(char *s1, char *s2)
 	int len;
 
 	if (s1 == NULL)
-		return (s2);
-	if(s2 == NULL)
-		return (s1);
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (; s2[i] != '\0'; i++)
 		le++;
 	for (i = 0; s1[i] != '\0'; i++)
 		count++;
 	len = le + count;
 	ptr = (char *)malloc(sizeof(char) * len);
-	if (ptr==NULL)
+	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < count; i++)
 		ptr[i] = s1[i];

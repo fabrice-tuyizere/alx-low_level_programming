@@ -1,13 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * malloc_checked - function definition
+ * @b: intiger parameter
+ * Return: pointer address
+ */
 void *malloc_checked(unsigned int b)
 {
-	int *ptr;
+	void *ptr = malloc(b);
 
-	ptr = (void *)malloc(sizeof(*ptr) * b);
-	if(ptr == NULL)
-		exit (98);
-	free(ptr);
+	if (ptr == NULL)
+		exit(98);
 	return (ptr);
 }
 

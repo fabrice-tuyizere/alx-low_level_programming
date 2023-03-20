@@ -9,7 +9,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, len = n, j;
+	unsigned int i, len = n;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -26,11 +26,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[len++] = s1[i];
 	}
-	for (j = 0; s2[j] && j < n; j++)
+	for (i = 0; s2[i] && i < n; i++)
 	{
-		ptr[len++] = s2[j];
+		ptr[len++] = s2[i];
 	}
 	ptr[len] = '\0';
+	return (ptr);
 	return (0);
 }
 
